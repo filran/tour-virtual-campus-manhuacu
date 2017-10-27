@@ -7,7 +7,29 @@
 </head>
 <body>
 	<a-scene inspector="url: javascripts/aframe-inspector.min.js">
-		
+		<a-assets>
+			<!-- 3d models -->
+			<a-asset-item id="campus-obj" src="/models/campus/campus-manhuacu.obj"></a-asset-item>
+			<a-asset-item id="campus-mtl" src="/models/campus/campus-manhuacu.mtl"></a-asset-item>
+		</a-assets>
+
+		<!-- camera -->
+		<a-camera position="0 10 50"></a-camera>
+
+		<!-- prédio -->
+		<a-entity
+			posittion = "0 0 -10"
+			obj-model="obj: #campus-obj; mtl: #campus-mtl">
+		</a-entity>
+
+		<!-- box amarelo -->
+		<a-box scale="20 30 20" position="100 15 120" color="yellow"></a-box>
+
+		<!-- chão -->
+		<a-plane color="brown" height="1000" width="1000" rotation="-90 0 0"></a-plane>
+
+		<!-- céu -->
+		<a-sky color="lightblue"></a-sky>
 	</a-scene>
 </body>
 </html>
