@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title></title>
 	<script type="text/javascript" src="javascripts/aframe.min.js"></script>
+	<script src="javascripts/aframe-extras.min.js"></script>
 </head>
 <body>
 	<a-scene inspector="url: javascripts/aframe-inspector.min.js">
@@ -11,15 +12,29 @@
 			<!-- 3d models -->
 			<a-asset-item id="campus-obj" src="/models/campus/campus-manhuacu.obj"></a-asset-item>
 			<a-asset-item id="campus-mtl" src="/models/campus/campus-manhuacu.mtl"></a-asset-item>
+
+			<!-- checkpoint -->
+			<a-mixin id="checkpoint"></a-mixin>
+        	<a-mixin id="checkpoint-hovered" color="#6CEEB5"></a-mixin>
 		</a-assets>
 
 		<!-- camera -->
-		<a-camera position="0 10 50"></a-camera>
+		<a-camera 
+				position="0 0 25"
+				camera="userHeight: 16"
+               	universal-controls="movementControls: checkpoint"
+                checkpoint-controls="mode: animate">
+			<a-cursor></a-cursor>
+		</a-camera>
 
 		<!-- prédio -->
-		<a-entity
-			posittion = "0 0 -10"
-			obj-model="obj: #campus-obj; mtl: #campus-mtl">
+		<a-entity>
+			<a-entity
+				position = "0 0 -10"
+				obj-model="obj: #campus-obj; mtl: #campus-mtl"
+				checkpoint="offset: 0 10 20"
+				>
+			</a-entity>
 		</a-entity>
 
 		<!-- box amarelo -->
