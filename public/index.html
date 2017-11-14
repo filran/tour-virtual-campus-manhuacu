@@ -23,19 +23,81 @@
 				position="0 0 25"
 				camera="userHeight: 16"
                	universal-controls="movementControls: checkpoint"
-                checkpoint-controls="mode: animate">
+                checkpoint-controls="mode: animate; animateSpeed: 40">
 			<a-cursor></a-cursor>
 		</a-camera>
 
 		<!-- prédio -->
 		<a-entity>
 			<a-entity
+				id="Build"
 				position = "0 0 -10"
 				obj-model="obj: #campus-obj; mtl: #campus-mtl"
 				checkpoint="offset: 0 10 20"
 				>
 			</a-entity>
-		</a-entity>
+			
+			<!-- <laboratorios> -->
+
+			<!-- lab 02 -->
+			<a-entity>
+				<a-box id="lab01" checkpoint="offset: 5 10 -8" color="gray" position="-50 0 40" scale="10 20 10"></a-box>
+			</a-entity>
+			<!-- lab 01 -->
+			<a-entity>
+				<a-box id="lab02" checkpoint="offset: 5 10 -8" color="gray" position="-45 0 20" scale="10 20 10"></a-box>
+			</a-entity>
+			<!-- adm -->
+			<a-entity>
+				<a-box id="adm" checkpoint="offset: 5 10 -8" color="gray" position="-55 0 60" scale="10 20 10"></a-box>
+			</a-entity>
+
+			<!-- </laboratorios> -->
+
+			<!-- <principal> -->
+				<a-entity>
+					<a-box id="sala1" position="30 0 -10" scale="40 30 11.5" checkpoint="offset:  0 10 20" color="red"></a-box>
+				</a-entity>
+			<!-- </principal> -->
+
+			<!-- cozinha -->
+
+				<a-entity>
+					<a-box id="cantina" checkpoint="offset: 0 10 20" position="70 20 -10" scale="40 10 11" color="black">		
+				</a-entity>
+
+				<a-entity>
+					<a-box id="telhado" class="cantina" checkpoint="offset: 0 10 20" position="70 40 -10" scale="40 2 10" color="blue">
+				</a-entity>
+
+				<a-entity>
+					<a-box id="cozinha" class="cantina" checkpoint="offset: 0 10 20" position="45 32 -10" scale="10 17 10" color="black">
+				</a-entity>
+			<!-- cozinha -->
+
+				<a-entity>
+					<a-box id="secretaria" class="seila" checkpoint="offset: 0 10 20" position="105 32 -10" scale="30 15 10" color="orange">
+				</a-entity>
+
+				<a-entity>
+					<a-box id="sala2" class="sala" checkpoint="offset: 0 10 20" position="140 32 -10" scale="40 15 20" color="pink">
+				</a-entity>
+
+			<!-- guarita -->
+				<a-entity>
+					<a-box id="guarita" class="guarita" position="-55 0 120" scale="10 20 10" color="purple" checkpoint="offset: 5 10 -8"></a-box>
+				</a-entity>
+
+				<a-entity>
+					<a-box id="telhado" class="guarita" checkpoint="offset: 5 10 -8" position="-55 10 120" scale="15 2 10" color="black"></a-box>
+				</a-entity>
+
+				<a-entity>
+					<a-box id="telhado" class="guarita" checkpoint="offset: 5 10 -8" position="-20 5 130" scale="35 2 10" color="black" rotation="90 0 0"></a-box>
+				</a-entity>
+			<!-- guarita -->
+
+			</a-entity>
 
 		<!-- box amarelo -->
 		<a-box scale="20 30 20" position="100 15 120" color="yellow"></a-box>
