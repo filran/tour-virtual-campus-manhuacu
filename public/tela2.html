@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+  	<script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+
+  	<script type="text/javascript" src="https://rawgit.com/rdub80/aframe-gui/master/dist/aframe-gui.min.js"></script>
+
+  	<script type="text/javascript" src="javascripts/aframe.min.js"></script>
+	<script type="text/javascript" src="javascripts/aframe-component-href.js"></script>
+</head>
+<body>
+	<a-scene>
+		<a-assets>
+			<img id="if" src="gallery360/img/LogoIF/if3.jpg">
+		</a-assets>
+
+		<a-camera position="-0.6 1.5 4">
+			<a-cursor></a-cursor>
+		</a-camera>
+
+		<a-text 
+			color="black" value="Nesta visao voce tera sua experiencia imersiva visualizando as instalacoes atuais do campus Manhuacu. Escolha abaixo o tipo de visualizacao:" position="-6 4 -3" scale="1.5 1.5 1.5" geometry="primitive: plane; height: 2px; width: 0px"material="color: white"  align="center">
+		</a-text>
+
+		<a-text 
+			color="black" value="O campus Manhuacu possui projetos para expansão. Nesta funcão podera ser visto o novo predio do campus em Realidade Aumentada." position="5 4 -3" scale="1.5 1.5 1.5" geometry="primitive: plane; height: 2px; width: 0px"material="color: white"  align="center">
+		</a-text>
+	
+			<a-gui-label 
+				position="-6 6 -3"
+				width="2.5" height="0.75"
+				value="Visão do campus"
+				font-family="Helvetica"
+				font-color="black"
+				margin="0 0 0.05 0"
+				background-color="#A9A9A9"
+
+			></a-gui-label>
+
+			<a-gui-label
+				position="5 6 -3"
+				width="2.5" height="0.75"
+				value="Visão do campus"
+				font-family="Helvetica"
+				font-color="black"
+				margin="0 0 0.05 0"
+				background-color="#A9A9A9"
+			></a-gui-label>
+
+			<a-gui-button
+				position="-8 2 -3"
+				onclick="buttonActionFunction" key-code="32"
+				width="1" height="0.75"
+				value="RV"
+				font-family="Helvetica"
+				font-color="black"
+				margin="0 0 0.05 0"
+				background-color="#A9A9A9"
+			></a-gui-button>
+
+			<a-gui-button
+				position="-4 2 -3"
+				onclick="buttonActionFunction" key-code="32"
+				width="1" height="0.75"
+				value="360"
+				font-family="Helvetica"
+				font-color="black"
+				margin="0 0 0.05 0"
+				background-color="#A9A9A9"
+			></a-gui-button>
+
+			<a-gui-button
+				position="5 2 -3"
+				onclick="buttonActionFunction" key-code="32"
+				width="1" height="0.75"
+				value="RA"
+				font-family="Helvetica"
+				font-color="black"
+				margin="0 0 0.05 0"
+				background-color="#A9A9A9"
+			></a-gui-button>
+
+			<a-text 
+				color="black" value="Modelagem do
+			 campus em fotos 360" position="-4 0.6 -3" scale="1.5 1.5 1.5" geometry="primitive: plane; height: 2px; width: 0px"material="color: white"  align="center">
+			</a-text>
+
+			<a-text 
+				color="black" value="Modelagem do
+			 campus em 3D" position="-8 0.6 -3" scale="1.5 1.5 1.5" geometry="primitive: plane; height: 2px; width: 0px"material="color: white"  align="center">
+			</a-text>
+
+			<a-text 
+				color="black" value="E necessario
+				 estar no campus" position="5 0.6 -3" scale="1.5 1.5 1.5" geometry="primitive: plane; height: 2px; width: 0px" material="color: white"   align="center">
+			</a-text>
+
+			<a-image id="img" src="#if" position="-0.6 3 7" rotation="180 0 180" href="https://www.ifsudestemg.edu.br/"></a-image>	
+
+
+
+
+
+
+	</a-scene>
+</body>
+</html>

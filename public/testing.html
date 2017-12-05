@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+  	<script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+  	
+	<script src="https://rawgit.com/rdub80/aframe-gui/master/dist/aframe-gui.min.js"></script>
+	<script type="text/javascript" src="javascripts/aframe-gui.js"></script>
+
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<a-scene>
+		<a-box></a-box>
+		
+		<a-gui-button 
+			width="2.5" height="0.75"
+			onclick="buttonActionFunction" key-code="32"
+			value="test button"
+			font-family="Helvetica"
+			margin="0 0 0.05 0"
+		></a-gui-button>
+		<a-sky color="green"></a-sky>
+	</a-scene>
+	
+</body>
+</html>
